@@ -1,0 +1,16 @@
+.navbar{
+        background-color: black;
+    }
+    .navbar .navbar-brand{
+        color: ivory;
+    }
+    .navbar .nav-link{
+        color: ivory !important;
+        text-decoration: none !important;
+        margin-right: 20px;
+    }
+    @media (max-width:576px){
+        .navbar .nav-link{
+            margin-right: 0;
+        }
+    }
