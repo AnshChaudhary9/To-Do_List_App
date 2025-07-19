@@ -8,10 +8,8 @@ export default function EditTodo({ todo, onDone }) {
   const [form, setForm] = useState({ title: todo.title, description: todo.description });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const confirmUpdate = window.confirm('Are you sure you want to update this todo?');
-    if (!confirmUpdate) return;
     try {
-      await api.put(`/id/${todo.id}`, form);   // ✅ Pass ObjectId in URL
+      await api.put(`/id/${todo.id}`, form);   // Pass ObjectId in URL
       onDone(); // Refresh or exit edit mode
     } catch (error) {
       console.error('Update failed:', error);
