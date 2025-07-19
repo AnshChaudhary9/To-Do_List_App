@@ -18,8 +18,6 @@ export default function CreateTodo({ onSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const confirmCreate = window.confirm('Are you sure you want to create this todo?');
-    if (!confirmCreate) return;
     setLoading(true);
     setError(null);
     try {
